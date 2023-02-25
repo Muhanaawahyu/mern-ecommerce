@@ -1,13 +1,22 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import data from '../data'
+import axios from 'axios'
+// import data from '../data'
 
 function HomePage() {
+  const [products, setProducts] = useState([])
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const result = await axios.get('/api/products')
+      setProducts(result.data)
+    }
+    fetchProducts()
+  }, [])
   return (
     <div>
       <h1>Featured Products</h1>
-      <div className="grid mt-5 gap-1 justify-items-center grid-cols-2 bg-slate-200">
-        {data.products.map((product) => (
+      <div className="grid mt-5 gap-3 justify-items-center grid-cols-2 md:grid-cols-4 lg:grid-cols-6 bg-slate-200">
+        {products.map((product) => (
           <div className="bg-yellow-300 text-slate-900 w-44 min-h-[10rem] shadow-lg rounded-lg overflow-hidden">
             <Link to={`/product/${product.slug}`}>
               <img src={product.image} alt={product.name} className="w-full object-cover" />
