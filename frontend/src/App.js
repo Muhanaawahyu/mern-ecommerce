@@ -5,16 +5,19 @@ import ProductPage from './pages/ProductPage'
 function App() {
   return (
     <BrowserRouter>
-      <div>
+      <div className='min-h-screen flex flex-col'>
         <header className="bg-slate-900 p-5">
           <Link to="/" className="text-slate-100 font-bold">Tukupedia</Link>
         </header>
-        <main className="p-4 w-full min-h-screen bg-teal-200">
+        <main className="p-4 w-full flex-1 bg-teal-200">
           <Routes>
             <Route path="/product/:slug" element={<ProductPage />} />
             <Route path='/' element={<HomePage />} />
           </Routes>
         </main>
+        <footer>
+          <div className='text-center'>2023</div>
+        </footer>
       </div>
     </BrowserRouter>
   );

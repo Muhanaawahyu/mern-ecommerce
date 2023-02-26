@@ -7,7 +7,7 @@ const data = {
             image: '/images/p1.jpg', //679 x 829
             price: 26000,
             stock: 12,
-            rating: 4.5,
+            rating: 0.5,
             numReviews: 10,
             description: 'Buy 2 Get 1 pcs - Indomilk Steril Can Plain 189 ml'
         },
@@ -18,7 +18,7 @@ const data = {
             image: '/images/p2.jpg',
             price: 15000,
             stock: 12,
-            rating: 4.5,
+            rating: 3.5,
             numReviews: 10,
             description: '4+1 pcs Indomie Goreng Spesial'
         },
