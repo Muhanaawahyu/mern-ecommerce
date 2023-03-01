@@ -8,6 +8,7 @@ const data = {
             price: 26000,
             stock: 12,
             rating: 0.5,
+            numRatings: 171,
             numReviews: 10,
             description: 'Buy 2 Get 1 pcs - Indomilk Steril Can Plain 189 ml'
         },
@@ -19,6 +20,7 @@ const data = {
             price: 15000,
             stock: 12,
             rating: 3.5,
+            numRatings: 171,
             numReviews: 10,
             description: '4+1 pcs Indomie Goreng Spesial'
         },
@@ -30,6 +32,7 @@ const data = {
             price: 6000,
             stock: 12,
             rating: 4.5,
+            numRatings: 171,
             numReviews: 10,
             description: 'Chitato Wavy Beef BBQ 35 gr'
         },
@@ -41,6 +44,7 @@ const data = {
             price: 28000,
             stock: 12,
             rating: 4.5,
+            numRatings: 171,
             numReviews: 10,
             description: '2 Tepung Terigu Segitiga Biru 1 kg'
         },
@@ -52,6 +56,7 @@ const data = {
             price: 14000,
             stock: 12,
             rating: 4.5,
+            numRatings: 171,
             numReviews: 10,
             description: 'Kecap Manis Indofood Refill 520 ml'
         },
@@ -63,6 +68,7 @@ const data = {
             price: 39600,
             stock: 12,
             rating: 4.5,
+            numRatings: 171,
             numReviews: 10,
             description: '2 pcs - Bimoli Klasik 1 Liter Pouch'
         },

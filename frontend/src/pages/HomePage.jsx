@@ -1,7 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useEffect, useReducer, useState } from 'react'
 import axios from 'axios'
-import logger from 'use-reducer-logger'
 import ProductCard from '../components/ProductCard'
 // import data from '../data'
 
@@ -19,7 +18,7 @@ const reducer = (state, action) => {
 }
 
 function HomePage() {
-  const [{ products, loading, error }, dispatch] = useReducer(logger(reducer), {
+  const [{ products, loading, error }, dispatch] = useReducer(reducer, {
     products: [],
     loading: true,
     error: ''
@@ -43,12 +42,15 @@ function HomePage() {
     <div>
       <h1>Featured Products</h1>
       <div className="grid mt-5 gap-2 justify-items-center grid-cols-2 md:grid-cols-4 lg:grid-cols-6 bg-slate-200">
-        {
-          loading ? (<div>Loading ...</div>) :
-            error ? (<div>{error}</div>) :
-              products.map((product) => (
-                <ProductCard product={product} />
-              ))}
+        {loading ? (
+          <div>Loading ...</div>
+        ) : error ? (
+          <div>{error}</div>
+        ) : (
+          products.map((product) => (
+            <ProductCard product={product} />
+          ))
+        )}
       </div>
     </div>
   )

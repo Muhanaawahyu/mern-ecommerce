@@ -1,38 +1,37 @@
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStar, faStarHalfAlt } from '@fortawesome/free-regular-svg-icons'
-import { faStar as fasStar } from '@fortawesome/free-solid-svg-icons'
+import { FaStar, FaStarHalfAlt, FaRegStar } from 'react-icons/fa'
 
 function Rating(props) {
-    const { rating, numReviews } = props
+    const { rating } = props
     return (
-        <div>
-            <span className='text-yellow-400'>
-                {rating >= 1 ? <FontAwesomeIcon icon={fasStar} /> :
-                    rating >= 0.5 ? <FontAwesomeIcon icon={faStarHalfAlt} /> :
-                        <FontAwesomeIcon icon={faStar} />}
-            </span>
-            <span className='text-yellow-400'>
-                {rating >= 2 ? <FontAwesomeIcon icon={fasStar} /> :
-                    rating >= 1.5 ? <FontAwesomeIcon icon={faStarHalfAlt} /> :
-                        <FontAwesomeIcon icon={faStar} />}
-            </span>
-            <span className='text-yellow-400'>
-                {rating >= 3 ? <FontAwesomeIcon icon={fasStar} /> :
-                    rating >= 2.5 ? <FontAwesomeIcon icon={faStarHalfAlt} /> :
-                        <FontAwesomeIcon icon={faStar} />}
-            </span>
-            <span className='text-yellow-400'>
-                {rating >= 4 ? <FontAwesomeIcon icon={fasStar} /> :
-                    rating >= 3.5 ? <FontAwesomeIcon icon={faStarHalfAlt} /> :
-                        <FontAwesomeIcon icon={faStar} />}
-            </span>
-            <span className='text-yellow-400'>
-                {rating >= 5 ? <FontAwesomeIcon icon={fasStar} /> :
-                    rating >= 4.5 ? <FontAwesomeIcon icon={faStarHalfAlt} /> :
-                        <FontAwesomeIcon icon={faStar} />}
-            </span>
-            <span> {numReviews}</span>
+        <div className='flex'>
+            <div className='flex items-center'>
+                <span className='text-yellow-400'>
+                    {rating >= 1 ? <FaStar /> :
+                        rating >= 0.5 ? <FaStarHalfAlt /> :
+                            <FaRegStar />}
+                </span>
+                <span className='text-yellow-400'>
+                    {rating >= 2 ? <FaStar /> :
+                        rating >= 1.5 ? <FaStarHalfAlt /> :
+                            <FaRegStar />}
+                </span>
+                <span className='text-yellow-400'>
+                    {rating >= 3 ? <FaStar /> :
+                        rating >= 2.5 ? <FaStarHalfAlt /> :
+                            <FaRegStar />}
+                </span>
+                <span className='text-yellow-400'>
+                    {rating >= 4 ? <FaStar /> :
+                        rating >= 3.5 ? <FaStarHalfAlt /> :
+                            <FaRegStar />}
+                </span>
+                <span className='text-yellow-400'>
+                    {rating >= 5 ? <FaStar /> :
+                        rating >= 4.5 ? <FaStarHalfAlt /> :
+                            <FaRegStar />}
+                </span>
+            </div>
         </div>
     )
 }
