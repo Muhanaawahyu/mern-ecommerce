@@ -11,7 +11,7 @@ function Navbar() {
         <div className="w-screen bg-slate-50 top-0 h-20 z-10 drop-shadow-md">
             <div className='px-5 flex justify-between items-center w-full h-full'>
                 <div className='hidden md:flex items-center px-2'>
-                    <Link to="/" className="text-slate-400 font-bold text">Tukupedia</Link>
+                    <Link to="/" className="text-slate-400 font-bold text">Shoppedia</Link>
                 </div>
                 <div className='flex items-center justify-between md:justify-evenly w-full px-2'>
                     <div className='flex w-full'>
